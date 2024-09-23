@@ -27,6 +27,17 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         }
         return primeSieve[p];
     }
+    @Override
+    public void printPrimes() {
+        System.out.println("Primzahlen bis " + upperLimit + ":");
+        for (int i = 2; i <= upperLimit; i++) {
+            if (primeSieve[i]) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println(); 
+    }
+
 
 
 }
