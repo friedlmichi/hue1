@@ -20,4 +20,13 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         }
     }
 
+    @Override
+    public boolean isPrime(int p) {
+        if (p < 2 || p > upperLimit) {
+            return false;
+        }
+        return primeSieve[p];
+    }
+
+
 }
